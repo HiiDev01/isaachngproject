@@ -1,0 +1,334 @@
+@font-face {
+  font-family: 'Clash Grotesk';
+  src: url('/src/font_cg/ClashGrotesk-Medium.ttf') format('truetype');
+}
+.Navbar{
+  width: 100%;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  min-height: 70px;
+  padding: 0px 3%;
+  background-color: var(--color-one);
+}
+.logo{
+  width: 50%;
+  font-size: 1.3rem;
+  font-family: var(--font-two);
+  font-family: 'Clash Grotesk';
+  color: var(--color-two);
+  font-weight: 600;
+}
+.Nav_link_con{
+  width: 100%;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 10px;
+}
+.navlist{
+  width: 100%;
+  flex: 1;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+.Nav_ul{
+  list-style: none;
+}
+.nav_ul_li{
+  display: inline-block;
+  margin: 0px 10px;
+  line-height: 50px;
+}
+.nav_link{
+  text-decoration: none;
+  font-size: 1.1rem;
+  font-family: 'Clash Grotesk';
+  font-weight: 500;
+  transition:  opacity 0.2s ease-in-out;
+  cursor: pointer;
+  color: var(--color-two);
+}
+.navlist ul li a:hover{
+  opacity: 0.7;
+  transition:  opacity 0.2s ease-in-out;
+}
+.pro_con{
+  width: auto;
+}
+.profile_link{
+  text-decoration: none;
+  margin: 0px 10px;
+  cursor: pointer;
+}
+.profile_icon{
+  width: 32px;
+  height: 32px;
+  object-fit: cover;
+}
+.cart_home_con{
+  width: auto;
+  display: flex;
+  align-items: center;
+  gap: 15px;
+}
+.search_link{
+  text-decoration: none;
+  position: relative;
+}
+.search_icon{
+  width: 20px;
+  height: 20px;
+  object-fit: contain;
+}
+.hidden_search{
+  position: absolute;
+  top: 70px;
+  left: 0;
+  width: 100%;
+  min-height: 20vh;
+  background-color: var(--color-one);
+  padding: 2% 5%;
+  z-index: 999999;
+  box-shadow: 0px 0px 2px var(--color-five);
+}
+.hidden_search input{
+  width: 100%;
+  padding: 10px;
+  border: none;
+  font-size: 1.2rem;
+  color: var(--color-two);
+  outline: none;
+  border-bottom: 1PX solid var(--color-five);
+  margin: 0px 0px 20px 0px;
+  background-color: transparent;
+}
+.search_results{
+  list-style: none;
+}
+.search_results li{
+  margin: 10px 0px;
+}
+.search_result_link{
+  color: var(--color-two);
+  
+}
+.cart_link{
+  text-decoration: none;
+  border: 2px solid var(--color-three);
+  padding: 8px 10px;
+  font-size: 1rem;
+  color: var(--color-two);
+  font-family: 'Clash Grotesk';
+  font-weight: 500;
+  text-transform: capitalize;
+  border-radius: 18.46px;
+  transition: background-color 0.2s ease-in-out;
+  cursor: pointer;
+}
+.cart_link:hover{
+  background-color: var(--color-three);
+  transition: background-color 0.2s ease-in-out;
+}
+.cart_icon_sp{
+  margin: 0px 5px 0px 0px;
+}
+.cart_icon{
+  width: 22px;
+  padding: 2px 0px 0px 0px;
+  height: 16px;
+  object-fit: contain;
+}
+.cart_number{
+  color: var( --color-three);
+}
+.hamburger{
+  width: 40px;
+  height: auto;
+  display: none;
+}
+.ham_bars{
+  height: 3px;
+  width: 100%;
+  background-color: var(--color-two);
+  margin: 3px 0px 3px 0px;
+  display: block;
+  border-radius: 2px;
+}
+
+@media screen  and (max-width: 1200px){
+  .Navbar{
+    width: 100%;
+    height: 70px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    position: fixed;
+    min-height: 70px;
+    background-color: var(--color-one);
+    z-index: 999999;
+    padding: 0px 2%;
+  }
+  .Nav_link_con{
+    width: 100%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+    gap: 10px;
+  }
+  .logo{
+    width: auto;
+    font-size: 0.9rem;
+    font-family: var(--font-two);
+    font-family: 'Clash Grotesk';
+    color: var(--color-two);
+    font-weight: 600;
+  }
+  .navlist{
+    width: 100%;
+    padding: 10px 0px;
+    flex: 1;
+    display: flex;
+    align-items: center;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    position: absolute;
+    top: 70px;
+    transform: translateX(100%);
+    background-color: var(--color-one);
+    box-shadow: 0px 0px 1px var(--color-five);
+    left: 0;
+  }
+  .navlist.active{
+    transform: translateX(0%);
+  }
+  .Nav_ul{
+    width: 100%;
+    list-style: none;
+  }
+  .nav_ul_li{
+    width: 100%;
+    display: block;
+    margin: 0px 10px;
+    line-height: 50px;
+  }
+
+  .nav_link{
+    text-decoration: none;
+    font-size: 1.1rem;
+    font-family: 'Clash Grotesk';
+    font-weight: 500;
+    transition:  opacity 0.2s ease-in-out;
+    cursor: pointer;
+    color: var(--color-two);
+  }
+  .navlist ul li a:hover{
+    opacity: 0.7;
+    transition:  opacity 0.2s ease-in-out;
+  }
+  .pro_con{
+    width: auto;
+  }
+  .profile_link{
+    text-decoration: none;
+    margin: 0px 10px;
+    cursor: pointer;
+  }
+  .profile_icon{
+    width: 32px;
+    height: 32px;
+    object-fit: cover;
+  }
+  .cart_home_con{
+    width: auto;
+    display: flex;
+    align-items: center;
+    gap: 15px;
+  }
+  .search_link{
+    text-decoration: none;
+  }
+  .search_icon{
+    width: 15px;
+    height: 15px;
+    object-fit: contain;
+  }
+  .cart_link{
+    text-decoration: none;
+    border: 2px solid var(--color-three);
+    padding: 5px 10px;
+    font-size: 0.7rem;
+    display: flex;
+    align-items: center;
+    color: var(--color-two);
+    font-family: 'Clash Grotesk';
+    font-weight: 500;
+    text-transform: capitalize;
+    border-radius: 18.46px;
+    transition: background-color 0.2s ease-in-out;
+    cursor: pointer;
+  }
+  .cart_link:hover{
+    background-color: var(--color-three);
+    transition: background-color 0.2s ease-in-out;
+  }
+  .cart_icon_sp{
+    margin: 0px 5px 0px 0px;
+  }
+  .cart_icon{
+    width: 20px;
+    padding: 2px 0px 0px 0px;
+    height: 16px;
+    object-fit: contain;
+  }
+  .cart_number{
+    color: var( --color-three);
+  }
+
+
+
+
+  .hamburger{
+    width: 40px;
+    height: auto;
+    display: block;
+    margin: 0px 0px 0px 20px;
+  }
+  .ham_bars{
+    height: 3px;
+    width: 100%;
+    background-color: var(--color-two);
+    margin: 3px 0px 3px 0px;
+    display: block;
+    border-radius: 2px;
+  }
+  .ham_bars:nth-last-child(1){
+    width: 60%;
+    float: right;
+    margin: 1px 0px 3px 0px;
+  }
+  .ham_bars:nth-last-child(2){
+    width: 100%;
+  }
+  .ham_bars:nth-last-child(3){
+    width: 60%;
+  }
+  .hamburger.active .ham_bars:nth-last-child(1){
+    transform: translateY(-7px) rotate(40deg);
+    width: 100%;
+    transition: transform 0.2s ease-in-out;
+  }
+  .hamburger.active .ham_bars:nth-last-child(2){
+    opacity: 0;
+    transition: opacity 0.2s ease-in-out;
+  }
+  .hamburger.active .ham_bars:nth-last-child(3){
+    transform: translateY(7px) rotate(-40deg);
+    width: 100%;
+    transition: transform 0.2s ease-in-out;
+  }
+}

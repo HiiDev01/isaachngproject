@@ -1,0 +1,261 @@
+.Footer{
+  width: 100%;
+  min-height: 10vh;
+  background-color:rgba(29, 29, 29, 1);
+  padding: 5% 5% 2% 5%;
+}
+.foter_item_con{
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+  gap: 15%;
+  margin: 0px 0px 40px 0px;
+}
+.footer_item_one{
+  width: auto;
+  color: rgba(255, 255, 255, 1);
+}
+.footer_item_one h2{
+  font-size: 1.875rem;
+  font-family: 'Clash Grotesk';
+  font-weight: 600;
+  text-transform: uppercase;
+  margin: 0px 0px 30px 0px;
+}
+.footer_item_one p{
+  font-family: var(--font-one);
+  font-weight: 600;
+  font-size: 1.25rem;
+  margin: 0px 0px 15px 0px;
+}
+.footer_social{
+  width: auto;
+}
+.footer_social a{
+  text-decoration: none;
+  margin: 0px 5px;
+}
+.footer_icon{
+  font-size: 1.25rem;
+  color: var(--color-three);
+}
+
+.footer_item_two{
+  width: 100%;
+  padding: 10px 0px 0px 0px;
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+}
+.footer_item{
+  width: 100%;
+}
+.footer_item h2{
+  font-size: 1.563rem;
+  font-family: var(--font-one);
+  font-weight: 600;
+  text-transform: uppercase;
+  margin: 0px 0px 30px 0px;
+  color: rgba(255, 255, 255, 1);
+  text-transform: capitalize;
+}
+.footer_item ul{
+  list-style: none;
+}
+.footer_item ul li{
+  font-family: var(--font-one);
+  font-weight: 700;
+  line-height: 1.6;
+}
+.footer_item ul li .footer_link{
+  text-decoration: none;
+  font-size: 1rem;
+  color: rgba(118, 117, 117, 1);
+}
+.footer_support{
+  color: var(--color-two);
+  text-decoration: none;
+  font-size: 1rem;
+}
+.copyright{
+  width: 100%;
+  text-align: center;
+  text-decoration: none;
+  font-family: var(--font-one);
+  font-size: 1.15rem;
+  font-weight: 600;
+  color: rgba(118, 117, 117, 1);
+  text-transform: capitalize;
+}
+.copyright a{
+  color: var(--color-two);
+}
+
+@media screen and (max-width: 1200px){
+  .Footer{
+    width: 100%;
+    min-height: 10vh;
+    background-color:rgba(29, 29, 29, 1);
+    padding: 5% 2% 5% 2%;
+  }
+  .foter_item_con{
+    display: flex;
+    align-items: flex-start;
+    justify-content: space-between;
+    gap: 8%;
+    margin: 0px 0px 40px 0px;
+  }
+  .footer_item_one{
+    width: auto;
+    color: rgba(255, 255, 255, 1);
+  }
+  .footer_item_one h2{
+    font-size: 1.675rem;
+    font-family: 'Clash Grotesk';
+    font-weight: 600;
+    text-transform: uppercase;
+    margin: 0px 0px 30px 0px;
+  }
+  .footer_item_one p{
+    font-family: var(--font-one);
+    font-weight: 600;
+    font-size: 1.2rem;
+    margin: 0px 0px 15px 0px;
+  }
+  .footer_social{
+    width: auto;
+  }
+  .footer_social a{
+    text-decoration: none;
+    margin: 0px 5px;
+  }
+  .footer_icon{
+    font-size: 1.2rem;
+    color: var(--color-three);
+  }
+  
+  .footer_item_two{
+    width: 100%;
+    padding: 10px 0px 0px 0px;
+    display: flex;
+    align-items: flex-start;
+    justify-content: space-between;
+  }
+  .footer_item{
+    width: 100%;
+  }
+  .footer_item h2{
+    font-size: 1.363rem;
+    font-family: var(--font-one);
+    font-weight: 600;
+    text-transform: uppercase;
+    margin: 0px 0px 30px 0px;
+    color: rgba(255, 255, 255, 1);
+    text-transform: capitalize;
+  }
+  .footer_item ul{
+    list-style: none;
+  }
+  .footer_item ul li{
+    font-family: var(--font-one);
+    font-weight: 700;
+    line-height: 1.6;
+  }
+  .footer_item ul li .footer_link{
+    text-decoration: none;
+    font-size: 1rem;
+    color: rgba(118, 117, 117, 1);
+  }
+  .footer_support{
+    color: var(--color-two);
+    text-decoration: none;
+    font-size: 1rem;
+  }
+  .copyright{
+    width: 100%;
+    text-align: center;
+    text-decoration: none;
+    font-family: var(--font-one);
+    font-size: 1.1rem;
+    font-weight: 600;
+    color: rgba(118, 117, 117, 1);
+    text-transform: capitalize;
+  }
+  .copyright a{
+    color: var(--color-two);
+  }
+  
+}
+@media screen and (max-width: 768px) {
+  .Footer{
+    width: 100%;
+    min-height: 10vh;
+    background-color:rgba(29, 29, 29, 1);
+    padding: 10% 2% 10% 2%;
+  }
+  .foter_item_con{
+    display: flex;
+    flex-wrap: wrap;
+    align-items: flex-start;
+    justify-content: space-between;
+    gap: 20%;
+    row-gap: 20%;
+    margin: 0px 0px 40px 0px;
+  }
+  .footer_item_one{
+    width: 100%;
+    text-align: center;
+    color: rgba(255, 255, 255, 1);
+    margin: 0px 0px 40px 0px;
+  }
+  .footer_item_one h2{
+    font-size: 1.875rem;
+    font-family: 'Clash Grotesk';
+    font-weight: 600;
+    text-transform: uppercase;
+    margin: 0px 0px 30px 0px;
+  }
+  .footer_item_one p{
+    font-family: var(--font-one);
+    font-weight: 600;
+    font-size: 1.25rem;
+    margin: 0px 0px 15px 0px;
+  }
+  .footer_social{
+    width: auto;
+  }
+  .footer_social a{
+    text-decoration: none;
+    margin: 0px 5px;
+  }
+  .footer_icon{
+    font-size: 1.25rem;
+    color: var(--color-three);
+  }
+  
+  .footer_item_two{
+    width: 100%;
+    padding: 10px 0px 0px 0px;
+    display: flex;
+    flex-wrap: wrap;
+    text-align: center;
+    align-items: flex-start;
+    justify-content: space-between;
+  }
+  .footer_item{
+    width: 100%;
+  }
+  .footer_item h2{
+    font-size: 1.563rem;
+  }
+  .footer_item ul li .footer_link{
+    font-size: 1rem;
+  }
+  .footer_support{
+    font-size: 1rem;
+  }
+  .copyright{
+    font-size: 1.15rem;
+  }
+
+}

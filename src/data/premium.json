@@ -1,0 +1,25 @@
+[
+  {
+    "img": "/images/fg2.png",
+    "type": "Pre",
+    "productName": "Futuristic Golden Kyrie",
+    "price": "990.99",
+    "id": 1
+  },
+
+  {
+    "img": "/images/fg3.png",
+    "type": "Pre",
+    "productName": "Special Crocs Concept",
+    "price": "690.99",
+    "id": 2
+  },
+
+  {
+    "img": "/images/fg4.png",
+    "type": "Pre",
+    "productName": "Futuristic Air Jordan",
+    "price": "870.99",
+    "id": 3
+  }
+]

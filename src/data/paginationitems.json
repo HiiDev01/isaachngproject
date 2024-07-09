@@ -1,0 +1,114 @@
+[
+  {
+    "img": "/images/fg14-min.png",
+    "type": "pag",
+    "productName": "Joyride Dual Run",
+    "price": "927.29",
+    "id": 1
+  },
+
+  {
+    "img": "/images/fg13-min.png",
+    "type": "pag",
+    "productName": "Aero Swift",
+    "price": "76.99",
+    "id": 2
+  },
+
+  {
+    "img": "/images/fg12.png",
+    "type": "pag",
+    "productName": "Mike Air Mini",
+    "price": "36.89",
+    "id": 3
+  },
+  {
+    "img": "/images/fg14-min.png",
+    "type": "pag",
+    "productName": "Joyride Dual Run",
+    "price": "927.29",
+    "id": 4
+  },
+
+  {
+    "img": "/images/fg13-min.png",
+    "type": "pag",
+    "productName": "Aero Swift",
+    "price": "76.99",
+    "id": 5
+  },
+
+  {
+    "img": "/images/fg12.png",
+    "type": "pag",
+    "productName": "Mike Air Mini",
+    "price": "36.89",
+    "id": 6
+  },
+  {
+    "img": "/images/fg13-min.png",
+    "type": "pag",
+    "productName": "Aero Swift",
+    "price": "76.99",
+    "id": 7
+  },
+
+  {
+    "img": "/images/fg12.png",
+    "type": "pag",
+    "productName": "Mike Air Mini",
+    "price": "36.89",
+    "id": 8
+  },
+  {
+    "img": "/images/fg14-min.png",
+    "type": "pag",
+    "productName": "Joyride Dual Run",
+    "price": "927.29",
+    "id": 9
+  },
+
+  {
+    "img": "/images/fg13-min.png",
+    "type": "pag",
+    "productName": "Aero Swift",
+    "price": "76.99",
+    "id": 10
+  },
+
+  {
+    "img": "/images/fg12.png",
+    "type": "pag",
+    "productName": "Mike Air Mini",
+    "price": "36.89",
+    "id": 11
+  },
+  {
+    "img": "/images/fg12.png",
+    "type": "pag",
+    "productName": "Mike Air Mini",
+    "price": "36.89",
+    "id": 12
+  },
+  {
+    "img": "/images/fg12.png",
+    "type": "pag",
+    "productName": "Mike Air Mini",
+    "price": "36.89",
+    "id": 13
+  },
+  {
+    "img": "/images/fg12.png",
+    "type": "pag",
+    "productName": "Mike Air Mini",
+    "price": "36.89",
+    "id": 14
+  },
+  {
+    "img": "/images/fg12.png",
+    "type": "pag",
+    "productName": "Mike Air Mini",
+    "price": "36.89",
+    "id": 15
+  }
+]

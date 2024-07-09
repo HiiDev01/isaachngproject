@@ -1,0 +1,764 @@
+.cart{
+  width: 100%;
+}
+.cart_header{
+  width: 100%;
+  padding: 0px 0%;
+  background-color: var(--color-one);
+}
+.Cart_body{
+  width: 100%;
+  padding: 2% 0px 0px 0%;
+}
+
+.cart_intro{
+  width: 100%;
+  padding: 0px 10px;
+}
+.cart_intro a{
+  font-family: var(--font-one);
+  color: var(--color-one);
+  font-weight: 600;
+  text-transform: capitalize;
+  text-decoration: none;
+  display: flex;
+  font-size: 1.25rem;
+  align-items: center;
+  cursor: pointer;
+  margin: 0px 0px 10px 0px;
+}
+.cart_intro a:hover{
+  color: var(--color-three);
+}
+.cart_intro a span{
+  margin: 0px 5px 0px 0px;
+}
+.back_home_icon{
+  font-size: 1rem;
+}
+
+.cart_intro h2{
+  width: 50%;
+  margin: 0px auto 40px auto;
+  text-align: center;
+  font-size: 2.5rem;
+  color: var(--color-one);
+  font-family: 'Clash Grotesk';
+  position: relative;
+}
+.cart_intro h2::after{
+  position: absolute;
+  content: '';
+  left: 30%;
+  bottom: -5px;
+  width: 40%;
+  height: 3px;
+  background-color: var(--color-three);
+  box-shadow: 0px 0px 5px var(--color-three);
+}
+.carted_item{
+  display: flex;
+  align-items: flex-start;
+  gap: 20px;
+  padding: 0px 5%;
+  margin: 0px 0px 5% 0px;
+}
+.carted_item_one{
+  width: 60%;
+  padding: 20px;
+  min-height: 10vh;
+  box-shadow: 0px 0px 2px var(--color-five);
+  border-radius: 10px;
+}
+.carted_item_one h3{
+  color: var(--color-one);
+  font-family: 'Clash Grotesk';
+  font-size: 1.563rem;
+  font-weight: 500;
+  padding: 0px 0px 10px 0px;
+  border-bottom: 1px solid var(--color-five);
+}
+.carted_item_one ul{
+  list-style: none;
+  padding: 10px;
+}
+.carted_item_one ul li{
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 20px;
+  padding: 10px;
+  border-bottom: 1px solid var(--color-five);
+}
+.remove_all_cart_con{
+  width: 100%;
+  text-align: right;
+  padding: 5px 0px 0px 0px;
+}
+.remove_all_cart_btn{
+  font-family: 'Clash Grotesk';
+  font-weight: 600;
+  font-size: 0.8rem;
+  color: var(--color-three);
+  background-color: transparent;
+  border: none;
+}
+.carting_item_con{
+  width: auto;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+.carted_img_wrap{
+  width: 100px;
+  height: 120px;
+  border: 1px solid var(--color-three);
+  border-radius: 15px;
+  overflow: hidden;
+}
+.carted_img_wrap img{
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+}
+.Carting_details{
+  width: auto;
+}
+.Carting_details h2{
+  color: var(--color-one);
+  font-family: 'Clash Grotesk';
+  font-size: 1.363rem;
+  font-weight: 600;
+  word-spacing: 1px;
+  margin: 0px 0px 5px 0px;
+}
+.Carting_details p{
+  color: var(--color-one);
+  font-family: 'Clash Grotesk';
+  font-size: 0.938rem;
+  font-weight: 500;
+  word-spacing: 1px;
+  margin: 0px 0px 5px 0px;
+}
+.carting_size_btn{
+  width: auto;
+  margin: 0px 0px 10px 0px;
+}
+.carting_size_btn button{
+  margin: 2px 0px 2px 6px;
+  padding: 2px 3px;
+  background-color: transparent;
+  border: 1px solid var(--color-five);
+  border-radius: 2px;
+}
+.carting_size_btn button:hover{
+  background-color: var(--color-three);
+  color: var(--color-two);
+}
+.carting_color{
+  width: auto;
+}
+.carting_color button{
+  width: 20px;
+  height: 20px;
+  border: none;
+  border-radius: 50%;
+  margin: 0px 0px 0px 5px;
+}
+.carting_color button:hover{
+  transform: scale(1.1);
+}
+.carting_color button:nth-child(1){
+  background-color: var(--color-one);
+}
+.carting_color button:nth-child(2){
+  background-color: var(--color-two);
+  border: 1px solid var(--color-one);
+}
+.carting_color button:nth-child(3){
+  background-color: var(--color-three);
+}
+.carting_color button:nth-child(4){
+  background-color: var(--color-five);
+}
+
+.cart_pricing_wrapper{
+  width: auto;
+}
+.cart_pricing_wrapper h2{
+  color: var(--color-one);
+  font-family: var(--font-one);
+  font-size: 1.563rem;
+  font-weight: 700;
+  word-spacing: 1px;
+  margin: 0px 0px 50px 0px;
+}
+.quantity_con{
+  display: flex;
+  align-items: center;
+  gap: 1px;
+}
+.quantity_con button{
+  background-color: transparent;
+  padding: 3px 5px;
+  border-radius: 5px;
+  border: none;
+  font-weight: 600;
+  background-color: var(--color-three);
+  color: var(--color-two);
+}
+.quantity_con button:hover{
+  opacity: 0.7;
+}
+.quantity_number{
+  width: 30px;
+  text-align: right;
+  font-family: 'Clash Grotesk';
+  font-weight: 700;
+  padding: 0;
+  border: none;
+  outline: none;
+}
+.delete_cart_btn{
+  width: auto;
+  background-color: transparent;
+  color: var(--color-three);
+  font-size: 1.2rem;
+  border: none;
+  padding: 10px;
+}
+
+
+
+
+.carted_item_two{
+  width: 40%;
+  border: 1px solid black;
+  min-height: 10vh;
+  background-color:rgba(29, 29, 29, 1);
+  padding: 20px 30px;
+  border-radius: 10px;
+}
+.carted_order_head{
+  width: 100%;
+  padding: 5px 10px;
+  margin: 0px 0px 15% 0px;
+}
+.carted_order_head h2{
+  width: 100%;
+  text-align: center;
+  color: var(--color-two);
+  font-family: 'Clash Grotesk';
+  font-size:1.875rem;
+  text-transform: capitalize;
+  font-weight: 500;
+  word-spacing: 1px;
+  margin: 0px 0px 15px 0px;
+}
+.coupon_con{
+  width: 100%;
+  background-color: var(--color-two);
+  border-radius: 10px;
+  padding: 10px 30px;
+}
+.coupon_con h3{
+  width: 100%;
+  text-align: left;
+  color: var(--color-one);
+  font-family: 'Clash Grotesk';
+  font-size: 1.599rem;
+  text-transform: capitalize;
+  font-weight: 600;
+  word-spacing: 1px;
+  margin: 0px 0px 8px 0px;
+}
+.coupon_con p{
+  color: var(--color-five);
+  font-family: var(--font-one);
+  font-size: 0.799rem;
+  font-weight: 600;
+  margin: 0px 0px 5px 0px;
+}
+.coupon_form{
+  width: 100%;
+  display: flex;
+  align-items: center;
+  border: 1px solid black;
+  padding: 3px;
+  border-radius: 8px;
+  font-family: var(--font-one);
+  color: var(--color-five);
+}
+.coupon_bar{
+  flex: 1;
+  padding: 12px;
+  outline: none;
+  font-size: 0.959rem;
+  border: none;
+}
+.coupon_btn{
+  height: 100%;
+  padding: 10px 20px;
+  background-color: var(--color-one);
+  color: var(--color-two);
+  border: none;
+  border-radius: 8px;
+  font-size: 0.959rem;
+  text-transform: capitalize;
+  font-weight: 700;
+}
+
+.carted_order_body{
+  width: 100%;
+}
+.carted_order_body h2{
+  width: 100%;
+  text-align: left;
+  color: var(--color-two);
+  font-family: var(--font-one);
+  font-size: 1rem;
+  text-transform: capitalize;
+  font-weight: 400;
+  word-spacing: 1px;
+  margin: 0px 0px 10px 0px;
+  border-bottom: 1px solid var(--color-five);
+  padding: 10px 0px;
+}
+.carted_order_body h2 span{
+  float: right;
+}
+.carted_order_body_det{
+  width: 100%;
+}
+.carted_order_body_det ul{
+  width: 100%;
+  list-style: none;
+  padding: 0px 10px;
+  margin: 0px 0px 15px 0px;
+}
+.carted_order_body_det ul li{
+  width: 100%;
+  font-family: var(--font-one);
+  color: var(--color-two);
+  line-height: 2;
+}
+.carted_order_body_det span{
+  float: right;
+}
+.carted_ord_bod_li{
+  font-weight: 400;
+  font-size: 1rem;
+}
+.carted_ord_bod_Total{
+  font-weight: 600;
+  font-size: 1.25rem;
+}
+.checkout_btn{
+  width: 100%;
+  background-color: var(--color-three);
+  color: var(--color-two);
+  padding: 20px;
+  border: none;
+  border-radius: 15px;
+  font-family: var(--font-one);
+  font-weight: 700;
+  text-transform: capitalize;
+  font-size: 1.125rem;
+  transition: opacity 0.7s ease-in-out;
+}
+.checkout_btn:hover{
+  opacity: 0.7;
+  transition: opacity 0.7s ease-in-out;
+}
+
+.Recent_check_item_con{
+  width: 100%;
+  margin: 0px 0px 30px 0px;
+  padding: 2% 5%;
+}
+.Recent_check_item{
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin: 0px 0px 30px 0px;
+}
+.Recent_check_item h2{
+  color: var(--color-one);
+  font-family: 'Clash Grotesk';
+  font-size: 1rem;
+  text-transform: capitalize;
+  font-weight: 600;
+  font-size: 1.563rem;
+}
+.Recent_check_item a{
+  font-weight: 500;
+  font-family: 'Clash Grotesk';
+  text-transform: capitalize;
+  font-size: 1.563rem;
+  color: var(--color-three);
+  text-decoration: none;
+  cursor: pointer;
+}
+.Recent_check_item a:hover{
+  text-decoration: underline;
+}
+.Recent_item_div{
+  display: flex;
+  align-items: center;
+  gap: 20px;
+}
+.Recent_item{
+  width: 100%;
+  box-shadow: 0px 0px 3px var(--color-five);
+  min-height: 200px;
+  padding: 20px;
+  border-radius: 10px;
+}
+.recent_fav_btn_con{
+  width: 100%;
+  text-align: right;
+}
+.recent_fav_btn_con button{
+  border: none;
+  background-color: transparent;
+  font-size: 1.5rem;
+  color: var(--color-one);
+}
+.recent_img_con{
+  display: block;
+  width: 100%;
+  max-height: 180px;
+}
+.recent_img_con img{
+  width: 100%;
+  max-height: 180px;
+  object-fit: cover;
+}
+.Recent_item_div h2{
+  width: 100%;
+  text-align: center;
+  font-size: 1.513rem;
+  text-transform: capitalize;
+  font-family: 'Clash Grotesk';
+  font-weight: 500;
+  color: var(--border-col);
+  margin: 0px 0px 10px 0px;
+}
+.recent_price_con{
+  display: flex;
+  align-items: flex-end;
+  justify-content: space-between;
+  margin: 0px 0px 15px 0px;
+}
+.recent_price_con h3{
+  color: var();
+  font-size: 1.813rem;
+  font-family: 700;
+  font-family: var(--font-one);
+}
+.recent_color{
+  width: auto;
+}
+.recent_color p{
+  color: var(--color-five);
+  font-size: 0.9rem;
+  text-align: center;
+  font-family: var(--font-one);
+  padding: 0px 0px 5px 10px;
+}
+.rec_color{
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  padding: 0px 5%;
+}
+.rec_color button{
+  min-width: 15px;
+  height: 15px;
+  border: none;
+  border-radius: 50%;
+}
+.rec_color button:hover{
+  transform: scale(1.1);
+}
+.rec_color button:nth-child(1){
+  background-color: var(--color-one);
+}
+.rec_color button:nth-child(2){
+  background-color: var(--color-two);
+  border: 1px solid var(--color-one);
+}
+.rec_color button:nth-child(3){
+  background-color: var(--color-three);
+}
+.rec_color button:nth-child(1){
+  background-color: var(--color-five);
+}
+
+.recent_add_con{
+  display: flex;
+  width: 100%;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0px 3%;
+}
+.recent_add_con button{
+  background-color: transparent;
+  border: none;
+}
+.recent_add_con button:nth-child(2){
+  background-color: var(--color-three);
+  padding: 12px 20px;
+  color: var(--color-two);
+  display: flex;
+  font-size: 0.875rem;
+  font-weight: 600;
+  text-transform: capitalize;
+  align-items: center;
+  gap: 5px;
+  border-radius: 10px;
+}
+.recent_add_con button .Bookmark{
+  font-size: 1.2rem;
+  color: var(--color-one);
+  border-radius: 5px;
+  color: var(--color-five);
+}
+
+.cart_hero_page{
+  width: 100%;
+  background: linear-gradient(to top, rgba(0,0,0,0.8),rgba(0,0,0,0.8)), url(/public/images/frame-min.jpeg);
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  min-height: 50vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.cart_context{
+  display: flex;
+  align-items: center;
+  gap: 30px;
+}
+.cart_context h1{
+  font-size: 3.75rem;
+  font-family: 'Clash Grotesk';
+  color: var(--color-two);
+  font-weight: 600;
+}
+.cart_context a{
+  text-decoration: none;
+  font-size: 1.813rem;
+  font-weight: 500;
+  text-transform: capitalize;
+  color: var(--color-two);
+  border: 1px solid var(--color-three);
+  padding: 15px 20px;
+  border-radius: 30px;
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  transition: background-color 0.2s ease-in-out;
+  cursor: pointer;
+}
+.cart_context a:hover{
+  background-color: var(--color-three);
+  transition: background-color 0.2s ease-in-out;
+}
+@media (max-width: 1200px) {
+  .carted_item_one h3{
+    font-size: 1.263rem;
+  }
+  .carted_item {
+    flex-direction: column;
+    padding: 0px 2%;
+  }
+  .carted_item_one, .carted_item_two {
+    width: 100%;
+    padding: 5% 5%;
+  }
+  .carted_item_one{
+    padding: 5px;
+  }
+  .carted_item_one ul{
+    list-style: none;
+    padding: 20px 0px;
+  }
+  .carted_item_one ul li{
+    padding: 10px 0px;
+    position: relative;
+  }
+  .cart_pricing_wrapper h2{
+    font-size: 1.563rem;
+    font-weight: 700;
+    word-spacing: 1px;
+    margin: 0px 0px 30px 0px;
+  }
+  .carted_order_head {
+    margin-bottom: 5%;
+  }
+  .Recent_item_div{
+    display: grid;
+    grid-template-columns: repeat(2,1fr);
+    flex-wrap: wrap;
+    align-items: center;
+    gap: 20px;
+  }
+  .recent_img_con{
+    display: block;
+    width: 100%;
+    max-height: 180px;
+  }
+  .recent_img_con img{
+    width: 100%;
+    max-height: 180px;
+    object-fit: contain;
+  }
+  .Cart_body{
+    width: 100%;
+    padding: 25% 0px 0px 0%;
+  }
+  .cart_context{
+    width: 100%;
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    gap: 30px;
+    padding: 20px;
+  }
+  .cart_context h1{
+    font-size: 2.75rem;
+    font-family: 'Clash Grotesk';
+    color: var(--color-two);
+    font-weight: 600;
+  }
+  .cart_context a{
+    font-size: 1.213rem;
+  }
+  .cart_pricing_wrapper h2{
+    font-size: 1.2rem;
+    font-weight: 700;
+    margin: 0px 0px 70px 0px;
+  }
+  .quantity_con{
+    gap: 10;
+  }
+  .quantity_con button{
+    padding: 2px 5px;
+  }
+  .carting_size_btn button{
+    margin: 2px 10px 2px 10px;
+    padding: 2px 3px;
+  }
+  .carting_color button{
+    width: 15px;
+    height: 15px;
+    border: none;
+    border-radius: 50%;
+    margin: 0px 0px 0px 5px;
+  }
+  .recent_price_con h3{
+    color: var(--color-one);
+    font-size: 1.288rem;
+  }
+}
+
+@media (max-width: 768px) {
+  .Recent_item_div{
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    gap: 20px;
+  }
+  .Recent_item{
+    min-width: 300px;
+    width: 100%;
+    box-shadow: 0px 0px 3px var(--color-five);
+    min-height: 200px;
+    padding: 20px;
+    border-radius: 10px;
+  }
+  .Recent_check_item h2{
+    color: var(--color-one);
+    font-family: 'Clash Grotesk';
+    font-size: 1rem;
+    text-transform: capitalize;
+    font-weight: 600;
+    font-size: 1.3rem;
+  }
+  .Recent_check_item a{
+    font-weight: 500;
+    font-size: 1.1rem;
+  }
+  .cart_intro h2 {
+    width: 80%;
+    font-size: 2rem;
+  }
+  .carted_img_wrap {
+    width: 80px;
+    height: 100px;
+  }
+  .Carting_details h2, .Carting_details p {
+    font-size: 0.9rem;
+  }
+  .carting_size_btn button{
+    margin: 2px 3px 2px 3px;
+    padding: 2px 3px;
+    box-shadow: none;
+    color: var(--color-five);
+  }
+  .quantity_con {
+    gap: 10px;
+  }
+  .delete_cart_btn{
+    width: auto;
+    background-color: transparent;
+    color: var(--color-three);
+    font-size: 1.2rem;
+    border: none;
+  }
+  .carted_order_head h2 {
+    font-size: 1.5rem;
+  }
+  .coupon_con{
+    padding: 10px 20px;
+  }
+  .coupon_form{
+    padding: 3px 10px;
+    color: var(--color-five);
+  }
+
+  .coupon_con h3 {
+    font-size: 1.2rem;
+  }
+  .coupon_bar {
+    font-size: 0.8rem;
+  }
+  .coupon_btn {
+    min-height: 100%;
+    width: auto;
+    padding: 5px 8px;
+    background-color: var(--color-one);
+    color: var(--color-two);
+    border: none;
+    border-radius: 8px;
+    font-size: 0.959rem;
+    text-transform: capitalize;
+    font-weight: 700;
+  }
+  .carted_order_body h2 {
+    font-size: 0.9rem;
+  }
+  .carted_ord_bod_li {
+    font-size: 0.9rem;
+  }
+  .carted_ord_bod_Total {
+    font-size: 1.1rem;
+  }
+  .checkout_btn {
+    font-size: 0.9rem;
+  }
+
+
+}
