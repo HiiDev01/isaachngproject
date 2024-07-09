@@ -14,8 +14,8 @@ function App() {
           <Navbar></Navbar>
           <div className="body_content">
             <Switch>
-              <Route exact path="/" component={Home} />
-              <Route path="/cart" component={Cart} />
+            <Route exact path="/" component={Home} />
+            <Route exact path="/cart" component={Cart} />
             </Switch>
           </div>
           <Footer></Footer>
