@@ -1,5 +1,4 @@
 import React, {useState} from 'react';
-import Navbar from './Navbar';
 import Footer from './Footer';
 import '../styles/Cart.css'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';

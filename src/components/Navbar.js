@@ -1,7 +1,5 @@
 import React, {useState} from 'react';
 import '../styles/Navbar.css'
-import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import {faCartShopping, faL, faUser} from '@fortawesome/free-solid-svg-icons';
 import { Link } from 'react-router-dom';
 import paginationItem from '../data/paginationitems.json';
 import { useCart } from './CartContext';

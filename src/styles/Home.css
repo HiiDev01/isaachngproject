@@ -6,7 +6,9 @@
   overflow-y: auto;
   position: relative;
 }
-
+.Home::-webkit-scrollbar{
+  display: none;
+}
 .Home_header{
   width: 100%;
   min-height: 60vh;

@@ -1,6 +1,5 @@
 import React, {useState, useRef}from 'react';
 import '../styles/Home.css'
-import Navbar from './Navbar';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import {faArrowRight, faPlus,} from '@fortawesome/free-solid-svg-icons';
 import preData from '../data/premium.json';
