@@ -1,5 +1,3 @@
-import React, {useState} from 'react';
-import Footer from './Footer';
 import '../styles/Cart.css'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faAngleDown, faArrowRight, faBookmark, faChevronLeft, faMinus, faPlus, faTrashCan } from '@fortawesome/free-solid-svg-icons';
@@ -81,6 +79,9 @@ const Cart = () => {
                   </button>
                 </li>
               ))}
+              <div className="remove_all_cart_con">
+                <button onClick={clearCart} className='remove_all_cart_btn'>Remove all</button>
+              </div>
             </ul>
           </div>
           <div className="carted_item_two">
@@ -122,11 +123,11 @@ const Cart = () => {
         <div className="Recent_check_item_con">
           <div className="Recent_check_item">
             <h2>Recently Checked</h2>
-            <a href="#">Sell All <span><FontAwesomeIcon icon={faArrowRight} /></span></a>
+            <a href="/">Sell All <span><FontAwesomeIcon icon={faArrowRight} /></span></a>
           </div>
           <div className="Recent_item_div">
             {itemsToShow.map((recentItem, index)=> (
-              <div className="Recent_item">
+              <div className="Recent_item" key={index}>
                 <div className="recent_fav_btn_con">
                   <button className='recent_fav_btn'><FontAwesomeIcon icon={faHeart} /></button>
                 </div>
@@ -161,11 +162,10 @@ const Cart = () => {
           <div className="cart_context">
             <h1>Wear the best Sneakers <br></br>
             on your foot!</h1>
-            <a href="#">Read More <span><FontAwesomeIcon icon={faArrowRight} /></span></a>
+            <a href="/">Read More <span><FontAwesomeIcon icon={faArrowRight} /></span></a>
           </div>
         </div>
       </main>
-      <Footer></Footer>
     </div>
   )
 }

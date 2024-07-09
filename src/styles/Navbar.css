@@ -78,6 +78,8 @@
 .search_link{
   text-decoration: none;
   position: relative;
+  background-color: transparent;
+  border: none;
 }
 .search_icon{
   width: 20px;

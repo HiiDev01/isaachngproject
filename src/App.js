@@ -4,6 +4,7 @@ import Home from './components/Home';
 import Cart from './components/Cart';
 import { CartProvider } from './components/CartContext';
 import Navbar from './components/Navbar';
+import Footer from './components/Footer';
 
 function App() {
   return (
@@ -19,6 +20,7 @@ function App() {
               <Cart></Cart>
             </Route>
           </Switch>
+          <Footer></Footer>
         </div>
       </Router>
     </CartProvider>

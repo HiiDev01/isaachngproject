@@ -48,21 +48,21 @@ const Navbar = () => {
         <div className={`navlist ${isActive ? 'active' : ''}`}>
           <ul className='Nav_ul'>
             <li className='nav_ul_li'><a href="/" className='nav_link'>Home</a></li>
-            <li className='nav_ul_li'><a href="#" className='nav_link'>Features</a></li>
-            <li className='nav_ul_li'><a href="#" className='nav_link'>Our Story</a></li>
-            <li className='nav_ul_li'><a href="#" className='nav_link'>Reviews</a></li>
+            <li className='nav_ul_li'><a href="/" className='nav_link'>Features</a></li>
+            <li className='nav_ul_li'><a href="/" className='nav_link'>Our Story</a></li>
+            <li className='nav_ul_li'><a href="/" className='nav_link'>Reviews</a></li>
           </ul>
           <div className="pro_con">
-            <a href="#" className='profile_link'>
+            <a href="/" className='profile_link'>
               <img src="/images/person.png" alt=""  className='profile_icon'/>
             </a>
           </div>
         </div>
         <div className="cart_home_con">
           <div className="search_con">
-            <a href="#" className='search_link' onClick={toggleSearch}>
+            <button href="#" className='search_link' onClick={toggleSearch}>
               <img src="/images/Vec2.png" alt="" className='search_icon'/>
-            </a>
+            </button>
             {isSearchActive && (
               <div className="hidden_search">
               <input type='text' 

@@ -6,7 +6,6 @@ import preData from '../data/premium.json';
 import newData from '../data/newproduct.json';
 import paginationItem from '../data/paginationitems.json';
 import { faBookmark, faHeart } from '@fortawesome/free-regular-svg-icons';
-import Footer from './Footer';
 import { useCart } from './CartContext';
 
 
@@ -76,7 +75,7 @@ const Home = () => {
               Elevate your style effortlessly with comfort and magic sneakers 
               crafted with precision and elegance
             </p>
-            <a href="#">Read More <span><FontAwesomeIcon icon={faArrowRight}/></span></a>
+            <a href="/">Read More <span><FontAwesomeIcon icon={faArrowRight}/></span></a>
           </div>
           <div className="HomeImg_con">
             <img src="/images/fig1-min.png" alt="HomeImage" className='HomeImg'/>
@@ -111,7 +110,7 @@ const Home = () => {
       <section className='All_product'>
         <h2 className='All_pro_heading'>Popular Collections</h2>
         <div className="category_nav">
-          <a href="#"><img src="/images/filter.png" alt="" /></a>
+          <a href="/"><img src="/images/filter.png" alt="" /></a>
           <div className="category_btn_con">
             <button className='categ_btn active'>All</button>
             <button className='categ_btn'>Nike</button>
@@ -161,7 +160,7 @@ const Home = () => {
           <div className="hero_content">
             <h1>Is this the perfect <br></br>
             Sneakers?</h1>
-            <a href="#">read more <span><FontAwesomeIcon icon={faArrowRight} /></span></a>
+            <a href="/">read more <span><FontAwesomeIcon icon={faArrowRight} /></span></a>
           </div>
         </div>
 
@@ -213,7 +212,6 @@ const Home = () => {
           )}
         </div>
       </section>
-      <Footer></Footer>
     </div>
   )
 }
