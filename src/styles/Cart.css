@@ -210,9 +210,10 @@
 .quantity_con button:hover{
   opacity: 0.7;
 }
+
 .quantity_number{
-  width: 30px;
-  text-align: right;
+  max-width: 30px;
+  text-align: center;
   font-family: 'Clash Grotesk';
   font-weight: 700;
   padding: 0;
@@ -354,6 +355,9 @@
   font-size: 1.25rem;
 }
 .checkout_btn{
+  display: block;
+  text-align: center;
+  text-decoration: none;
   width: 100%;
   background-color: var(--color-three);
   color: var(--color-two);
@@ -617,7 +621,7 @@
   }
   .Cart_body{
     width: 100%;
-    padding: 25% 0px 0px 0%;
+    padding: 5% 0px 0px 0%;
   }
   .cart_context{
     width: 100%;
@@ -661,6 +665,15 @@
   .recent_price_con h3{
     color: var(--color-one);
     font-size: 1.288rem;
+  }
+  .quantity_number{
+    max-width: 30px;
+    text-align: center;
+    font-family: 'Clash Grotesk';
+    font-weight: 700;
+    padding: 0;
+    border: none;
+    outline: none;
   }
 }
 
@@ -758,6 +771,15 @@
   }
   .checkout_btn {
     font-size: 0.9rem;
+  }
+  .quantity_number{
+    max-width: 30px;
+    text-align: center;
+    font-family: 'Clash Grotesk';
+    font-weight: 700;
+    padding: 0;
+    border: none;
+    outline: none;
   }
 
 

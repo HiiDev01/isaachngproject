@@ -1,8 +1,8 @@
 import '../styles/Cart.css'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import { faAngleDown, faArrowRight, faBookmark, faChevronLeft, faMinus, faPlus, faTrashCan } from '@fortawesome/free-solid-svg-icons';
-import {  faHeart } from '@fortawesome/free-regular-svg-icons';
-import paginationItems from '../data/paginationitems.json';
+import { faAngleDown, faArrowRight, /*faBookmark,*/ faChevronLeft, faMinus, faPlus, faTrashCan } from '@fortawesome/free-solid-svg-icons';
+/*import {  faHeart } from '@fortawesome/free-regular-svg-icons';*/
+/*import paginationItems from '../data/paginationitems.json';*/
 import { useCart } from './CartContext';
 import { Link } from 'react-router-dom';
 
@@ -10,12 +10,19 @@ const Cart = () => {
 
   const { cartItems, removeFromCart, updateItemQuantity, clearCart } = useCart();
 
+  const totalQuantity = cartItems.reduce((acc, item) => acc + item.quantity, 0);//total cal
+  const subtotal = cartItems.reduce((acc, item) => acc + (item.price * item.quantity), 0);//subtotal
+  const tax = 0.1 * subtotal;//tax
+  const total = subtotal + tax;//Total
+
+
+
   const handleQuantityChange = (itemId, quantity) => {
     if (quantity >= 1) {
       updateItemQuantity(itemId, quantity);
     }
   };
-  const itemsToShow = paginationItems.slice(0, 4);
+  /*const itemsToShow = paginationItems.slice(0, 4);*/
 
 
 
@@ -109,21 +116,31 @@ const Cart = () => {
               </h2>
               <div className="carted_order_body_det">
                 <ul>
-                  <li className='carted_ord_bod_li'>Items <span>3</span></li>
-                  <li className='carted_ord_bod_li'>Total quantities <span>5</span></li>
-                  <li className='carted_ord_bod_li'>Sub Total <span>$384.87</span></li>
-                  <li className='carted_ord_bod_li'>Tax <span>$1.50</span></li>
-                  <li className='carted_ord_bod_Total'>Total <span>$386.37</span></li>
+                  <li className='carted_ord_bod_li'>Items <span>{cartItems.length}</span></li>
+                  <li className='carted_ord_bod_li'>Total quantities <span>{totalQuantity}</span></li>
+                  <li className='carted_ord_bod_li'>Sub Total <span>${subtotal.toFixed(2)}</span></li>
+                  <li className='carted_ord_bod_li'>Tax <span>${tax.toFixed(2)}</span></li>
+                  <li className='carted_ord_bod_Total'>Total <span>${total.toFixed(2)}</span></li>
                 </ul>
-                <button className='checkout_btn'>Checkout</button>
+                <Link to={{
+                  pathname: '/checkout',
+                  state:{
+                    cartItems,
+                    totalQuantity,
+                    subtotal,
+                    tax,
+                    total
+                  }
+                  }} className='checkout_btn'>Checkout</Link>
               </div>
             </div>
           </div>
         </div>
+        {/*
         <div className="Recent_check_item_con">
           <div className="Recent_check_item">
             <h2>Recently Checked</h2>
-            <a href="/">Sell All <span><FontAwesomeIcon icon={faArrowRight} /></span></a>
+            <Link to="/">Sell All <span><FontAwesomeIcon icon={faArrowRight} /></span></Link>
           </div>
           <div className="Recent_item_div">
             {itemsToShow.map((recentItem, index)=> (
@@ -157,12 +174,14 @@ const Cart = () => {
               </div>
             ))}
           </div>
-        </div>
+        </div> 
+        */}
+        
         <div className="cart_hero_page">
           <div className="cart_context">
             <h1>Wear the best Sneakers <br></br>
             on your foot!</h1>
-            <a href="/">Read More <span><FontAwesomeIcon icon={faArrowRight} /></span></a>
+            <Link to="/">Read More <span><FontAwesomeIcon icon={faArrowRight} /></span></Link>
           </div>
         </div>
       </main>

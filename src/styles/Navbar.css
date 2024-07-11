@@ -4,13 +4,29 @@
 }
 .Navbar{
   width: 100%;
-  height: 100%;
+  height: auto;
   display: flex;
   align-items: center;
   justify-content: space-between;
   min-height: 70px;
   padding: 0px 3%;
   background-color: var(--color-one);
+  overflow: hidden;
+  box-shadow: 0px 0px 1px var(--color-five);
+}
+.Navbar.static {
+  position: static;
+  left: 0;
+  top: 0;
+  overflow: hidden;
+  box-shadow: 0px 0px 1px var(--color-five);
+}
+.Navbar.fixed {
+  position: fixed;
+  top: 0%;
+  left: 0%;
+  z-index: 1000;
+  overflow-x: hidden;
 }
 .logo{
   width: 50%;
@@ -27,6 +43,7 @@
   align-items: center;
   justify-content: space-between;
   gap: 10px;
+  overflow-x: hidden;
 }
 .navlist{
   width: 100%;
@@ -34,6 +51,7 @@
   display: flex;
   align-items: center;
   justify-content: space-between;
+  z-index: 9999;
 }
 .Nav_ul{
   list-style: none;
@@ -143,13 +161,15 @@
   padding: 2px 0px 0px 0px;
   height: 16px;
   object-fit: contain;
+  overflow-x: hidden;
 }
 .cart_number{
-  color: var( --color-three);
+  color: var( --color-two);
+
 }
 .hamburger{
-  width: 40px;
-  height: auto;
+  width: 30px;
+  height: 30px;
   display: none;
 }
 .ham_bars{
@@ -157,7 +177,6 @@
   width: 100%;
   background-color: var(--color-two);
   margin: 3px 0px 3px 0px;
-  display: block;
   border-radius: 2px;
 }
 
@@ -168,19 +187,20 @@
     display: flex;
     align-items: center;
     justify-content: space-between;
-    position: fixed;
     min-height: 70px;
     background-color: var(--color-one);
     z-index: 999999;
     padding: 0px 2%;
+    overflow-x: hidden;
   }
   .Nav_link_con{
-    width: 100%;
+    width: 70%;
     height: 100%;
     display: flex;
     align-items: center;
+    padding: 0px 20px 0px 0px;
     justify-content: flex-end;
-    gap: 10px;
+    gap: 5px;
   }
   .logo{
     width: auto;
@@ -198,12 +218,14 @@
     align-items: center;
     flex-wrap: wrap;
     justify-content: space-between;
-    position: absolute;
+    position: fixed;
     top: 70px;
     transform: translateX(100%);
     background-color: var(--color-one);
     box-shadow: 0px 0px 1px var(--color-five);
     left: 0;
+    z-index: 9999;
+    overflow-x: hidden;
   }
   .navlist.active{
     transform: translateX(0%);
@@ -211,11 +233,12 @@
   .Nav_ul{
     width: 100%;
     list-style: none;
+    padding: 10px 15px;
   }
   .nav_ul_li{
     width: 100%;
     display: block;
-    margin: 0px 10px;
+    margin: 0px 0px;
     line-height: 50px;
   }
 
@@ -244,12 +267,14 @@
     width: 32px;
     height: 32px;
     object-fit: cover;
+
   }
   .cart_home_con{
     width: auto;
     display: flex;
     align-items: center;
     gap: 15px;
+    overflow-x: hidden;
   }
   .search_link{
     text-decoration: none;
@@ -258,6 +283,17 @@
     width: 15px;
     height: 15px;
     object-fit: contain;
+  }
+  .hidden_search{
+    position: fixed;
+    top: 70px;
+    left: 0;
+    width: 100%;
+    min-height: 20vh;
+    background-color: var(--color-one);
+    padding: 2% 5%;
+    z-index: 999;
+    box-shadow: 0px 0px 2px var(--color-five);
   }
   .cart_link{
     text-decoration: none;
@@ -288,39 +324,41 @@
     object-fit: contain;
   }
   .cart_number{
-    color: var( --color-three);
+    color: var( --color-two);
   }
 
 
 
 
   .hamburger{
-    width: 40px;
-    height: auto;
+    width: 30px;
+    height: 30px;
     display: block;
-    margin: 0px 0px 0px 20px;
+    margin: 0px 0px 0px 0px;
+    overflow-x: hidden;
+    padding: 5px 0px 0px 0px;
   }
   .ham_bars{
     height: 3px;
     width: 100%;
     background-color: var(--color-two);
-    margin: 3px 0px 3px 0px;
-    display: block;
+    margin: 0px 0px 3px 0px;
     border-radius: 2px;
   }
   .ham_bars:nth-last-child(1){
     width: 60%;
     float: right;
-    margin: 1px 0px 3px 0px;
+    margin: 0px 0px 3px 0px;
   }
   .ham_bars:nth-last-child(2){
     width: 100%;
+    margin: 0px 0px 5px 0px;
   }
   .ham_bars:nth-last-child(3){
     width: 60%;
   }
   .hamburger.active .ham_bars:nth-last-child(1){
-    transform: translateY(-7px) rotate(40deg);
+    transform: translateY(-7px) rotate(45deg);
     width: 100%;
     transition: transform 0.2s ease-in-out;
   }
@@ -329,7 +367,7 @@
     transition: opacity 0.2s ease-in-out;
   }
   .hamburger.active .ham_bars:nth-last-child(3){
-    transform: translateY(7px) rotate(-40deg);
+    transform: translateY(7px) rotate(-45deg);
     width: 100%;
     transition: transform 0.2s ease-in-out;
   }

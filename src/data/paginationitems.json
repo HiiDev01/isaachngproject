@@ -18,7 +18,7 @@
   {
     "img": "/images/fg12.png",
     "type": "pag",
-    "productName": "Mike Air Mini",
+    "productName": "Nike Air Mini",
     "price": "36.89",
     "id": 3
   },
@@ -39,9 +39,9 @@
   },
 
   {
-    "img": "/images/fg12.png",
+    "img": "/images/fg9.png",
     "type": "pag",
-    "productName": "Mike Air Mini",
+    "productName": "Nike SB Dunk",
     "price": "36.89",
     "id": 6
   },
@@ -56,7 +56,7 @@
   {
     "img": "/images/fg12.png",
     "type": "pag",
-    "productName": "Mike Air Mini",
+    "productName": "Nike Air Mini",
     "price": "36.89",
     "id": 8
   },
@@ -79,35 +79,35 @@
   {
     "img": "/images/fg12.png",
     "type": "pag",
-    "productName": "Mike Air Mini",
+    "productName": "Nike Air Mini",
     "price": "36.89",
     "id": 11
   },
   {
     "img": "/images/fg12.png",
     "type": "pag",
-    "productName": "Mike Air Mini",
+    "productName": "Nike Air Mini",
     "price": "36.89",
     "id": 12
   },
   {
     "img": "/images/fg12.png",
     "type": "pag",
-    "productName": "Mike Air Mini",
+    "productName": "Nike Air Mini",
     "price": "36.89",
     "id": 13
   },
   {
     "img": "/images/fg12.png",
     "type": "pag",
-    "productName": "Mike Air Mini",
+    "productName": "Nike Air Mini",
     "price": "36.89",
     "id": 14
   },
   {
-    "img": "/images/fg12.png",
+    "img": "/images/fg8-min.png",
     "type": "pag",
-    "productName": "Mike Air Mini",
+    "productName": "Diesel Air Mini",
     "price": "36.89",
     "id": 15
   }

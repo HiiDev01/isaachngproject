@@ -7,6 +7,7 @@ import newData from '../data/newproduct.json';
 import paginationItem from '../data/paginationitems.json';
 import { faBookmark, faHeart } from '@fortawesome/free-regular-svg-icons';
 import { useCart } from './CartContext';
+import { Link } from 'react-router-dom';
 
 
 const ITEMS_PER_PAGE = 3;
@@ -15,6 +16,9 @@ const Home = () => {
   const totalPages = Math.ceil(paginationItem.length / ITEMS_PER_PAGE);
   const premiumItemsRef = useRef(null);
   const { addToCart } = useCart();
+  const [selectedCategory, setSelectedCategory] = useState('All');
+  const [favoriteItems, setFavoriteItems] = useState(new Set());
+  const [favoritePaginationItems, setFavoritePaginationItems] = useState(new Set());
 
   const handleClickNext = () => {
     if (currentPage < totalPages) {
@@ -60,13 +64,40 @@ const Home = () => {
       });
     }
   };
+  
+  const handleCategoryClick =(category)=>{
+    setSelectedCategory(category)
+  }
+
+  const toggleFavorite = (id, isPagination) => {
+    if (isPagination) {
+      setFavoritePaginationItems((prevFavorites) => {
+        const updatedFavorites = new Set(prevFavorites);
+        if (updatedFavorites.has(id)) {
+          updatedFavorites.delete(id);
+        } else {
+          updatedFavorites.add(id);
+        }
+        return updatedFavorites;
+      });
+    } else {
+      setFavoriteItems((prevFavorites) => {
+        const updatedFavorites = new Set(prevFavorites);
+        if (updatedFavorites.has(id)) {
+          updatedFavorites.delete(id);
+        } else {
+          updatedFavorites.add(id);
+        }
+        return updatedFavorites;
+      });
+    }
+  };
+
+  const filteredItems = selectedCategory === 'All' ? newData : newData.filter(item => item.type === selectedCategory);
 
   return (
     <div className='Home'>
       <header className='Home_header'>
-        <div className="nav_container">
-
-        </div>
         <div className="Home_content_con">
           <div className="Home_content">
             <h1>Sneakers</h1>
@@ -75,11 +106,10 @@ const Home = () => {
               Elevate your style effortlessly with comfort and magic sneakers 
               crafted with precision and elegance
             </p>
-            <a href="/">Read More <span><FontAwesomeIcon icon={faArrowRight}/></span></a>
+            <Link to="/">Read More <span><FontAwesomeIcon icon={faArrowRight}/></span></Link>
           </div>
           <div className="HomeImg_con">
             <img src="/images/fig1-min.png" alt="HomeImage" className='HomeImg'/>
-            <img src="/images/Ellipse3.png" alt="HomeShadow" className='HomeShadow'/>
           </div>
         </div>
       </header>
@@ -110,57 +140,67 @@ const Home = () => {
       <section className='All_product'>
         <h2 className='All_pro_heading'>Popular Collections</h2>
         <div className="category_nav">
-          <a href="/"><img src="/images/filter.png" alt="" /></a>
+          <Link to="/"><img src="/images/filter.png" alt="" /></Link>
           <div className="category_btn_con">
-            <button className='categ_btn active'>All</button>
-            <button className='categ_btn'>Nike</button>
-            <button className='categ_btn'>Kyrie</button>
-            <button className='categ_btn'>Air Jordans</button>
-            <button className='categ_btn'>Air Force 1</button>
-            <button className='categ_btn'>Addidas</button>
-            <button className='categ_btn'>Converse</button>
-            <button className='categ_btn'>Converse</button>
+            <button className={`categ_btn ${selectedCategory === 'All' ? 'active' : ''}`} onClick={() => handleCategoryClick('All')}>All</button>
+            <button className={`categ_btn ${selectedCategory === 'Nike' ? 'active' : ''}`} onClick={() => handleCategoryClick('Nike')}>Nike</button>
+            <button className={`categ_btn ${selectedCategory === 'Kyrie' ? 'active' : ''}`} onClick={() => handleCategoryClick('Kyrie')}>Kyrie</button>
+            <button className={`categ_btn ${selectedCategory === 'Air Jordans' ? 'active' : ''}`} onClick={() => handleCategoryClick('Air Jordans')}>Air Jordans</button>
+            <button className={`categ_btn ${selectedCategory === 'Air Force 1' ? 'active' : ''}`} onClick={() => handleCategoryClick('Air Force 1')}>Air Force 1</button>
+            <button className={`categ_btn ${selectedCategory === 'Adidas' ? 'active' : ''}`} onClick={() => handleCategoryClick('Adidas')}>Addidas</button>
+            <button className={`categ_btn ${selectedCategory === 'Converse' ? 'active' : ''}`} onClick={() => handleCategoryClick('Converse')}>Converse</button>
           </div>
         </div>
         <div className="pre_item">
-          {newData.map(items =>(
-            <div className="items_con" key={items.id}>
-              <div className="items_header">
-                <div className="items_ty_con">
-                  <p>{items.type}</p>
-                  <button><FontAwesomeIcon icon={faHeart} className='items_icon'/></button>
+        {filteredItems.length > 0 ? (
+            filteredItems.map(items => (
+              <div className="items_con" key={items.id}>
+                <div className="items_header">
+                  <div className="items_ty_con">
+                    <p>{items.type}</p>
+                    <button 
+                      onClick={() => toggleFavorite(items.id, false)} 
+                      className={favoriteItems.has(items.id) ? 'favorited' : ''}
+                     >
+                      <FontAwesomeIcon icon={faHeart} className='items_icon'/>
+                    </button>
+                  </div>
+                  <img src={items.img} alt="" className='New_item_img'/>
                 </div>
-                <img src={items.img} alt="" className='New_item_img'/>
-              </div>
-              <div className="items_body">
-                <h2>{items.productName}</h2>
-                <div className="pC">
-                  <h3>${items.price}</h3>
-                  <div className="items_color_con">
-                    <button></button>
-                    <button></button>
-                    <button></button>
-                    <button></button>
+                <div className="items_body">
+                  <h2>{items.productName}</h2>
+                  <div className="pC">
+                    <h3>${items.price}</h3>
+                    <div className="items_color_con">
+                      <button></button>
+                      <button></button>
+                      <button></button>
+                      <button></button>
+                    </div>
+                  </div>
+                  <div className="BC">
+                    <button>
+                      <FontAwesomeIcon icon={faBookmark} className='bookmark'/>
+                    </button>
+                    <button onClick={() => addToCart(items)}>
+                      <span><FontAwesomeIcon icon={faPlus} /></span>
+                      add to cart
+                    </button>
                   </div>
                 </div>
-                <div className="BC">
-                  <button>
-                    <FontAwesomeIcon icon={faBookmark} className='bookmark'/>
-                  </button>
-                  <button onClick={() => addToCart(items)}>
-                    <span><FontAwesomeIcon icon={faPlus} /></span>
-                    add to cart
-                  </button>
-                </div>
               </div>
+            ))
+          ) : (
+            <div className="no-items">
+              <p>No items available for this category</p>
             </div>
-          ))}
+          )}
         </div>
         <div className="hero_page">
           <div className="hero_content">
             <h1>Is this the perfect <br></br>
             Sneakers?</h1>
-            <a href="/">read more <span><FontAwesomeIcon icon={faArrowRight} /></span></a>
+            <Link to="/">read more <span><FontAwesomeIcon icon={faArrowRight} /></span></Link>
           </div>
         </div>
 
@@ -170,7 +210,12 @@ const Home = () => {
               <div className="paginationItem" key={paginItem.id}>
                 <div className="pagin_item_head">
                   <div className="pagin_fav_con">
-                     <button><FontAwesomeIcon icon={faHeart} className='pagin_fav_btn' /></button>
+                    <button 
+                      onClick={() => toggleFavorite(paginItem.id, true)} 
+                      className={favoritePaginationItems.has(paginItem.id) ? 'favorited' : ''}
+                     >
+                      <FontAwesomeIcon icon={faHeart} className='pagin_fav_btn' />
+                    </button>
                   </div>
                   <img src={paginItem.img} alt="" className='paginItemImage'/>
                 </div>

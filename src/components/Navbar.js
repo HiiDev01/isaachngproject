@@ -1,4 +1,4 @@
-import React, {useState} from 'react';
+import React, {useState, useEffect} from 'react';
 import '../styles/Navbar.css'
 import { Link } from 'react-router-dom';
 import paginationItem from '../data/paginationitems.json';
@@ -11,6 +11,21 @@ const Navbar = () => {
   const [isSearchActive, setIsSearchActive] = useState(false);
   const [searchQuery, setSearchQuery] = useState('');
   const [filteredData, setFilteredData] = useState([]);
+  const [isFixed, setIsFixed] = useState (false);
+
+  useEffect(()=>{
+    const handleScroll = ()=>{
+      if(window.scrollY > 70){
+        setIsFixed(true);
+      }else{
+        setIsFixed(false)
+      }
+    }
+    window.addEventListener('scroll', handleScroll);
+    return()=>{
+      window.addEventListener('scroll', handleScroll);
+    };
+  })
 
   const toggleHamburger = ()=>{
     setIsActive(!isActive);
@@ -42,7 +57,7 @@ const Navbar = () => {
     setFilteredData([]);
   };
   return (
-    <div className='Navbar'>
+    <div className={`Navbar ${isFixed ? 'fixed' : 'static'}`}>
       <div className="logo"><h1>LUXESTRIDE</h1></div>
       <div className="Nav_link_con">
         <div className={`navlist ${isActive ? 'active' : ''}`}>
@@ -85,7 +100,7 @@ const Navbar = () => {
             <span className='cart_icon_sp'>
               <img src="/images/Vector1.png" alt="" className='cart_icon'/>
             </span>
-            cart (<span className='cart_number'>{cartItems.length}</span>)
+            cart ( <span className='cart_number'>{cartItems.length}</span> )
           </Link>
         </div>
       </div>

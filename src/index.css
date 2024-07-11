@@ -4,7 +4,7 @@
   src: url('/src/font_cg/ClashGrotesk-Medium.ttf') format('truetype');
 }
 html{
-  overflow-x: hidden;
+  width: 100%;
 }
 html::-webkit-scrollbar{
   display: none;
@@ -23,6 +23,7 @@ html::-webkit-scrollbar{
   --shadow-col: #F6242433;
   --color-five: #767575;
   --color-six: #B4AFAF;
+  --color-seven: #252525;
   --font-one: "Montserrat", sans-serif;
 }
 body{

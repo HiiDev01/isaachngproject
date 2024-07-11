@@ -5,6 +5,7 @@ import Cart from './components/Cart';
 import { CartProvider } from './components/CartContext';
 import Navbar from './components/Navbar';
 import Footer from './components/Footer';
+import Checkout from './components/Checkout';
 
 function App() {
   return (
@@ -15,7 +16,8 @@ function App() {
           <div className="body_content">
             <Switch>
             <Route exact path="/" component={Home} />
-            <Route exact path="/cart" component={Cart} />
+            <Route path="/cart" component={Cart} />
+            <Route path="/checkout" component={Checkout} />
             </Switch>
           </div>
           <Footer></Footer>
