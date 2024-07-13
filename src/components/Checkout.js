@@ -77,7 +77,9 @@ const Checkout = () => {
                   <option value="Delivery">Pay on Delivery</option>
                 </select>
               </div>
-              <div className="card_details_con">
+            </div>
+          </form>
+          <div className="card_details_con">
                 <p className="card_heading">card</p>
                 <form action="" className='card_form'>
                   <div className="debit_card_div">
@@ -97,8 +99,6 @@ const Checkout = () => {
                   </div>
                 </form>
               </div>
-            </div>
-          </form>
         </div>
         <div className="checkout_item_two checkout_items_wraper">
           <div className="checkout_item_two_wrap">
